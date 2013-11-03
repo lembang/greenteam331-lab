@@ -36,8 +36,8 @@ public class RMIClient {
         setStrRMIAddress("rmi://"+getStrIPAddress()+":"+port+strServiceName);
         try{    
         	 /**
-             * Fix :
-             * Using nameing will cause a problem, unexpected nested
+             * FIXME :
+             * Using naming will cause a problem, unexpected nested
              * Hint : Use Registry & LocateRegistry class from
              *        java.rmi.registry
              */

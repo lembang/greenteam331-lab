@@ -41,7 +41,7 @@ public class RMIServer {
         try{
             RemoteInterface rIface = new RemoteImpl();
             /**
-             * Fix :
+             * FIXME :
              * Using nameing will cause a problem, unexpected nested
              * Hint : Use Registry & LocateRegistry class from
              *        java.rmi.registry
