@@ -8,27 +8,29 @@ package DBConn;
 
 import java.sql.*;
 import javax.swing.JOptionPane;
+
 /**
- *
+ * 
  * @author the
  */
 public class dbConnection {
-    private Connection conn=null;
-    
-    public dbConnection(){
-        try{
-            Class.forName("org.sqlite.JDBC");
-            conn = DriverManager.getConnection("jdbc:sqlite:/Users/the/NetBeansProjects/greenteam331-labpresentation/lab.db");
-            //conn.setAutoCommit(false);
-        }
-        catch(ClassNotFoundException | SQLException ex){
-            JOptionPane.showMessageDialog(null,"Connection Error :" + ex);
-        }
-    }
-    
-    public Connection getConnetion()
-    {
-        return this.conn;
-    }
+	private Connection conn = null;
+
+	public dbConnection() {
+		try {
+			Class.forName("org.sqlite.JDBC");
+			conn = DriverManager
+					.getConnection("jdbc:sqlite:/Users/the/NetBeansProjects/greenteam331-labpresentation/lab.db");
+			// conn.setAutoCommit(false);
+		} catch (ClassNotFoundException e) {
+			JOptionPane.showMessageDialog(null, "Connection Error :" + e);
+		} catch (SQLException e) {
+			JOptionPane.showMessageDialog(null, "Connection Error :" + e);
+		}
+	}
+
+	public Connection getConnetion() {
+		return this.conn;
+	}
 
 }
