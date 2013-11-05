@@ -50,8 +50,11 @@ public class RMIServer {
             Naming.rebind(getStrRMIAddress(),rIface);
 
         }
-        catch (RemoteException | MalformedURLException ex){
-            JOptionPane.showMessageDialog(null,"Connection Error :" + ex);
+        catch (RemoteException e){
+            JOptionPane.showMessageDialog(null,"Connection Error :" + e);
+            System.exit(0);
+        }catch (MalformedURLException e){
+            JOptionPane.showMessageDialog(null,"Connection Error :" + e);
             System.exit(0);
         }
         setStrServerStatus("Connected");
